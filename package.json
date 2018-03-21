@@ -20,6 +20,7 @@
   "dependencies": {
     "@moltin/sdk": "github:ynnoj/js-sdk",
     "babel-runtime": "^6.26.0",
+    "serverless": "^1.26.1",
     "source-map-support": "^0.4.18"
   }
 }
