@@ -1,0 +1,25 @@
+service: moltin-serverless-checkout
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+custom:
+  webpackIncludeModules: true
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev
+  region: us-east-1
+  environment:
+    MOLTIN_CLIENT_ID: ${env:MOLTIN_CLIENT_ID}
+
+functions:
+  checkout:
+    handler: handler.checkout
+    events:
+      - http:
+          path: /
+          method: post
+          cors: true

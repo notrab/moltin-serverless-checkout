@@ -1,0 +1,12 @@
+# dependencies
+node_modules
+
+# build
+.webpack
+.serverless
+
+# misc
+logs
+*.log
+npm-debug.log*
+.DS_Store
